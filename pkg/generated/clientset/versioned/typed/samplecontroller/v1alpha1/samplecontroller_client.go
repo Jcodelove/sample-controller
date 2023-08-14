@@ -19,11 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	v1alpha1 "k8s/sample-controller/pkg/apis/samplecontroller/v1alpha1"
+	"k8s/sample-controller/pkg/generated/clientset/versioned/scheme"
 	"net/http"
 
 	rest "k8s.io/client-go/rest"
-	v1alpha1 "k8s/sample-controller/pkg/apis/samplecontroller/v1alpha1"
-	"k8s/sample-controller/pkg/generated/clientset/versioned/scheme"
 )
 
 type SamplecontrollerV1alpha1Interface interface {

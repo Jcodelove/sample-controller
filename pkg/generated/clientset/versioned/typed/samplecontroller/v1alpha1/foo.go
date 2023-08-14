@@ -20,14 +20,14 @@ package v1alpha1
 
 import (
 	"context"
+	v1alpha1 "k8s/sample-controller/pkg/apis/samplecontroller/v1alpha1"
+	scheme "k8s/sample-controller/pkg/generated/clientset/versioned/scheme"
 	"time"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
-	v1alpha1 "k8s/sample-controller/pkg/apis/samplecontroller/v1alpha1"
-	scheme "k8s/sample-controller/pkg/generated/clientset/versioned/scheme"
 )
 
 // FoosGetter has a method to return a FooInterface.

@@ -19,14 +19,15 @@ limitations under the License.
 package fake
 
 import (
+	clientset "k8s/sample-controller/pkg/generated/clientset/versioned"
+	samplecontrollerv1alpha1 "k8s/sample-controller/pkg/generated/clientset/versioned/typed/samplecontroller/v1alpha1"
+	fakesamplecontrollerv1alpha1 "k8s/sample-controller/pkg/generated/clientset/versioned/typed/samplecontroller/v1alpha1/fake"
+
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "k8s/sample-controller/pkg/generated/clientset/versioned"
-	samplecontrollerv1alpha1 "k8s/sample-controller/pkg/generated/clientset/versioned/typed/samplecontroller/v1alpha1"
-	fakesamplecontrollerv1alpha1 "k8s/sample-controller/pkg/generated/clientset/versioned/typed/samplecontroller/v1alpha1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

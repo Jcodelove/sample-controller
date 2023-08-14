@@ -19,6 +19,9 @@ limitations under the License.
 package externalversions
 
 import (
+	versioned "k8s/sample-controller/pkg/generated/clientset/versioned"
+	internalinterfaces "k8s/sample-controller/pkg/generated/informers/externalversions/internalinterfaces"
+	samplecontroller "k8s/sample-controller/pkg/generated/informers/externalversions/samplecontroller"
 	reflect "reflect"
 	sync "sync"
 	time "time"
@@ -27,9 +30,6 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
-	versioned "k8s/sample-controller/pkg/generated/clientset/versioned"
-	internalinterfaces "k8s/sample-controller/pkg/generated/informers/externalversions/internalinterfaces"
-	samplecontroller "k8s/sample-controller/pkg/generated/informers/externalversions/samplecontroller"
 )
 
 // SharedInformerOption defines the functional option type for SharedInformerFactory.
